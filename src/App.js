@@ -9,6 +9,7 @@ import ExpenseTotal from "./components/ExpenseTotal";
 import ExpenseList from "./components/ExpenseList";
 import ExpenseItem from "./components/ExpenseItem";
 import AllocationForm from "./components/AllocationForm";
+import CurrencyForm from "./components/CurrencyForm";
 // Add code to import the other components here under
 
 import { AppProvider } from "./context/AppContext";
@@ -17,14 +18,18 @@ const App = () => {
     <AppProvider>
       <div className="container">
         <h1 className="mt-3">Company's Budget Allocation</h1>
-        <div className="row mt-3">
+        <div
+          className="row mt-3"
+          style={{ alignItems: "center", justifyContent: "center" }}
+        >
           <Budget />   
           <Remaining />
           <ExpenseTotal />
-          <ExpenseList />
-          <ExpenseItem />
-          <AllocationForm />
+          <CurrencyForm />
         </div>
+        <ExpenseList />
+        <ExpenseItem />
+        <AllocationForm />
       </div>
     </AppProvider>
   );
